@@ -97,9 +97,9 @@ function App() {
     <>
       {/* <Header /> */}
       <Routes>
-      <Route path={"/"} element={<Navigate replace to={"quitequote"} />} ></Route> 
-        <Route path="quitequote" element={<Header />}>
-          <Route path="quitequote" element={<Main content={content} />}></Route>
+      {/* <Route path={"/"} element={<Navigate replace to={"quitequote"} />} ></Route>  */}
+        <Route path="/" element={<Header />}>
+          <Route path="/" element={<Main content={content} />}></Route>
           <Route path="home" element={<Main content={content} />}></Route>
           {/* <Route path={"/"} element={<Navigate replace to={"/QuiteQuote"} />} ></Route> */}
           <Route path="information" element={<Information />}></Route>
