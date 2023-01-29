@@ -1,0 +1,101 @@
+.topic-page-all-main{
+    margin-top: 2em;
+}
+
+.topic-page-all-main-contents{
+    display: flex;
+    justify-content: center;
+}
+
+.topic-page-all-main-contents ul{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    width: 60em;
+}
+
+.topic-page-all-main-contents ul li {
+    list-style: none;
+    margin: 0 0.1em 0 0.15em;
+}
+
+.topic-page-all-main-contents ul li img{
+    width: 250px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+
+/* Responsive codes Starts from Here  */
+/* *** */
+/* *** */
+
+@media only screen and (max-width: 425px) {
+    .topic-page-all-main-contents ul{
+        width: 90vw;
+    }
+
+    .topic-page-all-main-contents ul li img{
+        width: 28vw;
+        height: 110px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .topic-page-all-main-contents ul li img{
+        width: 28vw;
+        height: 110px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .topic-page-all-main-contents ul li img{
+        width: 28vw;
+        height: 100px;
+    }
+}
+
+@media only screen and (max-device-width: 1024px) and (min-device-width: 425px) {
+    .topic-page-all-main-contents ul{
+        width: 90vw;
+    }
+    .topic-page-all-main-contents ul li img{
+        width: 28vw;
+        height: 120px;
+    }
+}
+
+@media only screen and (max-device-width: 1024px) and (min-device-width: 611px) {
+    .topic-page-all-main-contents ul li img{
+        width: 28vw;
+        height: 140px;
+    }
+}
+
+@media only screen and (max-device-width: 1024px) and (min-device-width: 715px) {
+    .topic-page-all-main-contents ul li img{
+        width: 28vw;
+        height: 150px;
+    }
+}
+
+@media only screen and (max-device-width: 1024px) and (min-device-width: 750px) {
+    .topic-page-all-main-contents ul li img{
+        width: 28vw;
+        height: 170px;
+    }
+}
+
+@media only screen and (max-device-width: 1024px) and (min-device-width: 850px) {
+    .topic-page-all-main-contents ul li img{
+        width: 28vw;
+        height: 190px;
+    }
+}
+
+@media only screen and (max-device-width: 1024px) and (min-device-width: 950px) {
+    .topic-page-all-main-contents ul li img{
+        width: 28vw;
+        height: 200px;
+    }
+}

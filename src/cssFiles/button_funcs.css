@@ -1,0 +1,380 @@
+/* Button box style sheets */
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@500&display=swap');
+
+
+
+.discover-button-funcs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(208 204 204);
+    border-radius: 10px;
+    margin: 1em;
+}
+
+#discover-box-heading{
+    font-size: larger;
+    font-weight: bolder;
+    font-family: 'Signika Negative', sans-serif;
+    padding: 1em 0 2em 0;
+}
+    
+
+.topics{
+    display: flex;
+    flex-flow: wrap;
+    width: 25em;
+    height: 21em;
+}
+    
+
+.topics li{
+    list-style: none;
+    width: auto;
+    height: 5em;
+    margin: 0.5em 2em 0 2em;
+}
+
+.topics li a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: lighter;
+    font-size: small;
+    font-family: 'Signika Negative', sans-serif;
+    
+}
+
+.topics li div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: lighter;
+    font-size: small;
+    font-family: 'Signika Negative', sans-serif;
+    
+}
+
+.topics li a img{
+    padding: 1px;
+    margin-bottom: 0.5em;
+    border: 2px solid rgb(0 0 0 / 40%);
+    border-radius: 50%;
+}
+
+.topics li div img{
+    padding: 1px;
+    margin-bottom: 0.5em;
+    outline: 2px solid #00000066;
+    border-radius: 50%;
+}
+
+@keyframes addboxAnimationAppare {
+    0%{
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes addboxAnimationDisappare {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+
+@keyframes addBoxFadeInAnimation{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+.add-box-back{
+    position: absolute;
+    width: 100vw;
+    height: 200vh;
+    display: flex;
+    justify-content: center;
+    background-color: #000000a6;
+    animation: addBoxFadeInAnimation 0.3s ease forwards 1;
+}
+
+#add-box{
+    height: fit-content;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    margin: 3em;
+    padding: 1.5em 6.5em;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    animation-timing-function: ease-out;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+}
+
+.remove-interest-btn{
+    display: flex;
+    align-self: flex-end;
+    border: none;
+    transform: translate(0, 1.2em);
+    color: #634f7f;
+}
+
+
+#add-box::-webkit-scrollbar{
+    display: none;
+}
+
+#close-add-box{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#close-btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #a1a1a1;
+}
+
+#close-btn:hover{
+    color: black;
+    transform: scale(1.2);
+}
+
+#add-box-heading{
+    margin-bottom: 2em;
+}
+
+#add-interests{
+    width: 29em;
+    align-self: end;
+    background-color: #1245b4;
+    border: none;
+    color: white;
+    padding: 0.8em 1em;
+    border-radius: 20px;
+}
+
+#add-interests:hover {
+    background-color: #0c2b70;
+}
+
+.cross-ico{
+    position: absolute;
+    transform: translate(27px, -34px);
+}
+
+.no-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    background-color: inherit;
+    font-weight: lighter;
+    font-size: small;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.no-btn img{
+    padding: 1px;
+    margin-bottom: 0.5em;
+    border: 2px solid rgb(0 0 0 / 40%);
+    border-radius: 50%;
+}
+
+
+/* Responsive codes Starts from Here  */
+/* *** */
+/* *** */
+
+@media only screen and (max-width: 530px) {
+    #add-box {
+        padding: 1.5em 3vw;
+        margin: 4em;
+    }
+
+    #add-box .topics {
+        width: 60vw;
+    }
+
+    #add-box-heading{
+        display: flex;
+        justify-content: center;
+    }
+
+    #close-btn{
+        color: black;
+    }
+
+    .topics{
+        margin: 0;
+        justify-content: center;
+    }
+
+    #add-interests {
+        width: 90vw;
+        margin-top: 2em;
+    }
+
+    .box {
+        width: 80vw;
+        height: 16em;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    #add-box {
+        padding: 1.5em 3vw;
+        margin: 4em;
+    }
+
+    #add-box .topics {
+        width: 80vw;
+    }
+
+    #add-box-heading{
+        display: flex;
+        justify-content: center;
+    }
+
+    #close-btn{
+        color: black;
+    }
+
+    .topics{
+        margin: 0;
+        justify-content: center;
+    }
+
+    #add-interests {
+        width: 90vw;
+    }
+
+    .box {
+        width: 80vw;
+        height: 16em;
+    }
+    
+
+}
+
+@media only screen and (max-width: 375px) {
+    #add-box {
+        padding: 1.5em 3vw;
+        margin: 2em;
+    }
+
+    #add-box .topics {
+        width: 85vw;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+    #add-box {
+        padding: 1.5em 3vw;
+        margin: 1.8em;
+    }
+
+    #add-box .topics {
+        width: 90vw;
+    }
+    
+}
+
+@media only screen and (max-device-width: 868px) and (min-device-width: 425px){
+    
+    #add-box {
+        padding: 1.5em 3vw;
+        margin: 4em;
+    }
+
+    #add-box .topics {
+        width: 30em;
+    }
+
+    #add-box-heading{
+        display: flex;
+        justify-content: center;
+    }
+
+    #close-btn{
+        color: black;
+    }
+
+    .topics{
+        margin: 0;
+        justify-content: center;
+    }
+
+    #add-interests {
+        width: 35em;
+    }
+
+    .box {
+        width: 80vw;
+        height: 16em;
+    }
+}
+
+@media screen and(max-width:1024px) , (max-height: 635px) and (orientation: landscape){
+    
+    #add-box {
+        padding: 1.5em 3vw;
+        margin: 2em;
+        height: 57vh;
+        overflow-y: scroll;
+    }
+
+    #add-box .topics {
+        width: 30em;
+    }
+
+    #add-box-heading{
+        display: flex;
+        justify-content: center;
+    }
+
+    #close-btn{
+        color: black;
+    }
+
+    .topics{
+        margin: 0;
+        justify-content: center;
+    }
+
+    #add-interests {
+        width: 35em;
+    }
+}
+
+@media only screen and (max-height: 665px) and (orientation: portrait){
+    #add-box {
+        overflow-y: scroll;
+        height: 60vh;
+    }
+    
+}

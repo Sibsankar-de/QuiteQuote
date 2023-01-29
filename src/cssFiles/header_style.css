@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+header {
+    height: 3.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 3.5em;
+    background-color: #ebedf0;
+    border-bottom: 0.5px solid #c6c5c5;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #a2a3a5;
+    border-radius: 10px;
+}
+
+#search-box {
+    width: 15vw;
+    outline: none;
+    background-color: #a2a3a5;
+    border: none;
+    height: 2.37em;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+#search {
+    border: none;
+    background-color: inherit;
+    border-radius: 10px;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5vw;
+}
+
+.navbar ul li {
+    list-style: none;
+    height: fit-content;
+    width: fit-content;
+}
+
+.navbar ul li button {
+    border: none;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4em;
+    height: 3.5em;
+    cursor: pointer;
+}
+
+.navbar ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.65em;
+    width: 4em;
+    cursor: pointer;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.navbar ul li .active {
+    border-bottom: 2px solid #838282;
+}
+
+body{
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Responsive codes Starts from Here  */
+/* *** */
+/* *** */
+
+@media only screen and (min-device-width: 1024px) {
+
+    .navbar ul li a:hover {
+        border-bottom: 2px solid #838282;
+    }
+}
