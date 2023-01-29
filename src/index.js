@@ -8,8 +8,8 @@ import { BrowserRouter, HashRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/">
-      <HashRouter>
+    <BrowserRouter >
+      <HashRouter basename="/">
         <App />
       </HashRouter>
     </BrowserRouter>
