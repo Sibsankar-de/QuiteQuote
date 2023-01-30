@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/quitequote/static/css/main.53b127bb.css",
+    "main.css": "/quitequote/static/css/main.03b03b2d.css",
     "main.js": "/quitequote/static/js/main.9dc46582.js",
     "static/js/787.bbe01249.chunk.js": "/quitequote/static/js/787.bbe01249.chunk.js",
     "static/media/feed_img9.jpg": "/quitequote/static/media/feed_img9.49c2ad22a7234f7ac9ee.jpg",
@@ -22,12 +22,12 @@
     "static/media/interest_6.png": "/quitequote/static/media/interest_6.a3fe561d35aa97c6a9b1.png",
     "static/media/feed_img12.png": "/quitequote/static/media/feed_img12.5194e6553f0ba978f9f8.png",
     "index.html": "/quitequote/index.html",
-    "main.53b127bb.css.map": "/quitequote/static/css/main.53b127bb.css.map",
+    "main.03b03b2d.css.map": "/quitequote/static/css/main.03b03b2d.css.map",
     "main.9dc46582.js.map": "/quitequote/static/js/main.9dc46582.js.map",
     "787.bbe01249.chunk.js.map": "/quitequote/static/js/787.bbe01249.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.53b127bb.css",
+    "static/css/main.03b03b2d.css",
     "static/js/main.9dc46582.js"
   ]
 }
