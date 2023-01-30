@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { Link } from 'react-router-dom'
 
 export const PageError = () => {
     const style = {
@@ -14,7 +15,7 @@ export const PageError = () => {
             <div style={style}>
                 <h1>Page Not Found</h1>
                 <h2>404 error</h2>
-                <h5>Refresh the page you browse or click on this link- <a href="/home">HOME</a></h5>
+                <h5>Refresh the page you browse or click on this link- <Link to="home">HOME</Link></h5>
                 <button id="refresh-page" onClick={() => window.location.reload()}>Refresh</button>
             </div>
         </>
