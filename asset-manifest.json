@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/quitequote/static/css/main.03b03b2d.css",
-    "main.js": "/quitequote/static/js/main.dfff964c.js",
+    "main.css": "/quitequote/static/css/main.20acd8eb.css",
+    "main.js": "/quitequote/static/js/main.65a17056.js",
     "static/js/787.bbe01249.chunk.js": "/quitequote/static/js/787.bbe01249.chunk.js",
     "static/media/feed_img9.jpg": "/quitequote/static/media/feed_img9.49c2ad22a7234f7ac9ee.jpg",
     "static/media/feed_img11.jpg": "/quitequote/static/media/feed_img11.e50977e4686e252de4b4.jpg",
@@ -15,19 +15,22 @@
     "static/media/feed_img8.jpg": "/quitequote/static/media/feed_img8.a11854077dec9b5aae5b.jpg",
     "static/media/interest_2.png": "/quitequote/static/media/interest_2.c229343234f062336d83.png",
     "static/media/feed_img13.png": "/quitequote/static/media/feed_img13.0b8162fe8c598ab10da0.png",
+    "static/media/feed_img17.png": "/quitequote/static/media/feed_img17.e501b9e88201c2363546.png",
     "static/media/interest_1.png": "/quitequote/static/media/interest_1.7782c22f6781d7844b2c.png",
     "static/media/interest_4.png": "/quitequote/static/media/interest_4.603957872258cfb0fe92.png",
+    "static/media/feed_img16.png": "/quitequote/static/media/feed_img16.19d72559c99ce843d0b0.png",
     "static/media/interest_5.png": "/quitequote/static/media/interest_5.660c0497d7a622ef2698.png",
     "static/media/interest_3.png": "/quitequote/static/media/interest_3.c2dbe63a276283129476.png",
     "static/media/interest_6.png": "/quitequote/static/media/interest_6.a3fe561d35aa97c6a9b1.png",
     "static/media/feed_img12.png": "/quitequote/static/media/feed_img12.5194e6553f0ba978f9f8.png",
+    "static/media/user.png": "/quitequote/static/media/user.9bf3f16c3b741e13a38b.png",
     "index.html": "/quitequote/index.html",
-    "main.03b03b2d.css.map": "/quitequote/static/css/main.03b03b2d.css.map",
-    "main.dfff964c.js.map": "/quitequote/static/js/main.dfff964c.js.map",
+    "main.20acd8eb.css.map": "/quitequote/static/css/main.20acd8eb.css.map",
+    "main.65a17056.js.map": "/quitequote/static/js/main.65a17056.js.map",
     "787.bbe01249.chunk.js.map": "/quitequote/static/js/787.bbe01249.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.03b03b2d.css",
-    "static/js/main.dfff964c.js"
+    "static/css/main.20acd8eb.css",
+    "static/js/main.65a17056.js"
   ]
 }
