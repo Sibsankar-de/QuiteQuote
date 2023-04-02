@@ -75,30 +75,30 @@
 // console.log('length: '+arr.length);
 
 
-const obj = {
-    love: {
-        userName: 'Love_quotes',
-        elem1: 'love',
-        elem2: ['hg', 'hdj', 'yrt', 'hdte'],
-    },
-    sad: {
-        userName: 'Sad_quotes',
-        elem1: 'sad',
-        elem2: ['ytwyr', 'tquiqe', 'plnf', 'qewdg'],
-    },
-    happy: {
-        userName: 'Happy_quotes',
-        elem1: 'happy',
-        elem2: ['hhgxhhg', 'eefrg', '34wrg', 'ij8dsf'],
-    },
+// const obj = {
+//     love: {
+//         userName: 'Love_quotes',
+//         elem1: 'love',
+//         elem2: ['hg', 'hdj', 'yrt', 'hdte'],
+//     },
+//     sad: {
+//         userName: 'Sad_quotes',
+//         elem1: 'sad',
+//         elem2: ['ytwyr', 'tquiqe', 'plnf', 'qewdg'],
+//     },
+//     happy: {
+//         userName: 'Happy_quotes',
+//         elem1: 'happy',
+//         elem2: ['hhgxhhg', 'eefrg', '34wrg', 'ij8dsf'],
+//     },
     
-};
+// };
 
-let x=0;
-for(let i in obj){
-    x+=obj[i].elem2.length;
-}
-console.log(x);
+// let x=0;
+// for(let i in obj){
+//     x+=obj[i].elem2.length;
+// }
+// console.log(x);
 
 // const list = ['love']
 
@@ -163,6 +163,8 @@ console.log(x);
 //   // Immutable copy of lunch
 //   var lunchClone = addToObject(lunch);
 
+var arr = ['apple', 'macbook', 'android', 'linux'];
+console.log(arr.length);
 
 
 

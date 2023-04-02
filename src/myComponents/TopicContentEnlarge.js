@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useRef, useEffect} from 'react'
+import { useRef, useEffect } from 'react'
 import { useMediaQuery } from 'react-responsive';
 
 export const TopicContentEnlarge = (props) => {
@@ -65,14 +65,22 @@ export const TopicContentEnlarge = (props) => {
     }
     return List;
   }
-  
-  
-  
+
+  let darkMode;
+  if (localStorage.getItem('isDarkMode') === null) {
+    darkMode = false;
+  }
+  else {
+    darkMode = JSON.parse(localStorage.getItem('isDarkMode'));
+  }
+
+
+
   return (
     <>
       <div className="topic-img-view-box-background">
-        <div className="topic-img-view-box">
-          <div id="close-topic-img-view-box">
+        <div className="topic-img-view-box" style={{backgroundColor: darkMode?'#35363a':'white', borderColor: darkMode?'#35363a':'black'}}>
+          <div id="close-topic-img-view-box" >
             <button id='close-btn' onClick={props.clickToClose}>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-x-lg" viewBox="0 0 16 16">
                 <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
@@ -89,9 +97,9 @@ export const TopicContentEnlarge = (props) => {
             </div>
             <div className="topic-img-box" ref={topicImgViewRef}>
               <ul>
-                {contentMaker(props.list).map((item, index)=>{
-                return item.userName === props.topic && <li key={index}><img src={item.feedImg} alt="" draggable={false} onContextMenu={(e)=>e.preventDefault()}/></li>
-              })}
+                {contentMaker(props.list).map((item, index) => {
+                  return item.userName === props.topic && <li key={index}><img src={item.feedImg} alt="" draggable={false} onContextMenu={(e) => e.preventDefault()} /></li>
+                })}
               </ul>
             </div>
             <div className="topic-next-btn" >

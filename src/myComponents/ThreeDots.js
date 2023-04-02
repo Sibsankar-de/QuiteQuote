@@ -6,6 +6,7 @@ export const ThreeDots = (props) => {
             <ul>
                 <a href={props.downloadRef} download="feedImg"><li><button className="three-dot-download">Download</button></li></a>
                 {/* <li><button className="three-dot-share">Share</button></li> */}
+                <li><button className="three-dot-save-btn" onClick={props.saveButtonClickHandeler}>Save</button></li>
             </ul>
         </div>
     )

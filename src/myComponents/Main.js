@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { Addtopics } from './Addtopics';
 import { Addbox } from './Addbox';
 import { LoopInterest } from './LoopInterest';
+import { UseMessage } from './UseMessage';
 
 
 export const Main = (props) => {
@@ -88,16 +89,24 @@ export const Main = (props) => {
         }))
     }
 
+    let darkMode;
+    if(localStorage.getItem('isDarkMode')===null){
+        darkMode = false;
+    }
+    else{
+        darkMode = JSON.parse(localStorage.getItem('isDarkMode'));
+    }
+
 
     return (
         <>
             <Helmet>
                 <title>Quite Quote - Home, All your Favourite Quotes are Here</title>
             </Helmet>
-            <main>
+            <main style={{backgroundColor: darkMode?'#202124':'white'}}>
                 <div id="main-content" ref={mainRef} style={value ? { pointerEvents: 'all' } : { pointerEvents: 'none' }}>
                     <div className="container">
-                        <div id="people-box" ref={interestRef}>
+                        <div id="people-box" ref={interestRef} style={{backgroundColor: darkMode?'#35363a':'white', borderColor: darkMode?'#262626':'#d0cccc'}}>
                             {list.length >= 5 && <div id="prev-btn" >
                                 <button className="click-next" onClick={() => interestRef.current.scrollLeft += -105.969}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-left" viewBox="0 0 16 16">
@@ -109,8 +118,8 @@ export const Main = (props) => {
                                 <div id="added-interests">
                                     <LoopInterest list={list} />
                                 </div>
-                                <button id="add-interest"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
-                                    fill="#3f3f40" className="bi bi-plus-circle" viewBox="0 0 16 16" onClick={addBoxbtn}>
+                                <button id="add-interest" style={{color: darkMode?'#c7c3c3':'black'}}><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                                    fill={darkMode?'#c7c3c3':"#3f3f40"} className="bi bi-plus-circle" viewBox="0 0 16 16" onClick={addBoxbtn}>
                                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                     <path
                                         d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
@@ -132,7 +141,7 @@ export const Main = (props) => {
                 </div>
                 {<Addbox style={{ display: !value ? 'flex' : 'none' }} clickToClose={addBoxbtn} onClick={onClickAddbtn} removeInterest={removeInterest} list={list} updateFeed={contentManager} />}
             </main>
-            <footer className='main-page-footer'>
+            <footer className='main-page-footer' style={{backgroundColor: darkMode?'#202124':'white', color: darkMode?'white':'black'}}>
                 <div className="foot-refresh">
                     <button id="refresh-page" onClick={() => window.location.reload()}>Refresh</button>
                     <p>For more and new contents refresh page</p>

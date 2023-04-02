@@ -92,7 +92,6 @@
 .topic-page-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 .topic-page-header {
@@ -115,6 +114,19 @@
 
 .topic-img-pic {
     width: 100px;
+    border-radius: 50%;
+    padding: 0.2em;
+    outline: 0.25em solid #000000a1;
+    animation: topicImgAnimation 1s ease-in-out 1;
+}
+
+@keyframes topicImgAnimation{
+    0%{
+        outline-width: 1px;
+    }
+    100%{
+        outline-width: 0.25em;
+    }
 }
 
 .about-topic {

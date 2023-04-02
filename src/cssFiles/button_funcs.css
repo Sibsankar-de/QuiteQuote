@@ -139,6 +139,8 @@
     border: none;
     transform: translate(0, 1.2em);
     color: #634f7f;
+    background-color: white;
+    border-radius: 50%;
 }
 
 

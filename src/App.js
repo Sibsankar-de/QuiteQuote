@@ -6,6 +6,7 @@ import './cssFiles/button_funcs.css';
 import './cssFiles/header_style.css';
 import './cssFiles/discover.css';
 import './cssFiles/topicPage_styles.css';
+import './cssFiles/settings_style.css';
 import './index.css';
 import Header from './myComponents/Header';
 import { Main } from './myComponents/Main';
@@ -17,6 +18,10 @@ import { PageError } from './myComponents/PageError';
 import { TopicPageAll } from './myComponents/TopicPageAll';
 import { TopicPageRecent } from './myComponents/TopicPageRecent';
 import { useEffect, useState } from 'react';
+import { Settings } from './myComponents/Settings';
+import { SettingProfile } from './myComponents/SettingProfile';
+import { SettingTheme } from './myComponents/SettingTheme';
+import { SettingsSavedContents } from './myComponents/SettingsSavedContents';
 
 
 function App() {
@@ -31,7 +36,7 @@ function App() {
       userName: 'Love_quotes',
       link: '/discover/love/all',
       dpElem: require('./myComponents/img/interest_1.png'),
-      feedElem: [require('./myComponents/img/feed_img4.jpg'), require('./myComponents/img/feed_img6.jpg'), require('./myComponents/img/feed_img10.jpg'),]
+      feedElem: [require('./myComponents/img/feed_img4.jpg'), require('./myComponents/img/feed_img6.jpg'), require('./myComponents/img/feed_img10.jpg'), require('./myComponents/img/feed_img16.png')]
     },
     happy: {
       userName: 'Happy_quotes',
@@ -43,7 +48,7 @@ function App() {
       userName: 'Sad_quotes',
       link: '/discover/sad/all',
       dpElem: require('./myComponents/img/interest_3.png'),
-      feedElem: [require('./myComponents/img/feed_img11.jpg'), require('./myComponents/img/feed_img12.png')]
+      feedElem: [require('./myComponents/img/feed_img11.jpg'), require('./myComponents/img/feed_img12.png'), require('./myComponents/img/feed_img17.png')]
     },
     motivation: {
       userName: 'Motivational_quotes',
@@ -60,17 +65,17 @@ function App() {
   }
 
   let localLiikeList;
-    if (localStorage.getItem('likeList') === null) {
-        localLiikeList = [];
-    }
-    else {
-        localLiikeList = JSON.parse(localStorage.getItem('likeList'))
-    }
-
-  while (localLiikeList.length < x){
-    localLiikeList.push({isLiked: false});
+  if (localStorage.getItem('likeList') === null) {
+    localLiikeList = [];
   }
-  
+  else {
+    localLiikeList = JSON.parse(localStorage.getItem('likeList'))
+  }
+
+  while (localLiikeList.length < x) {
+    localLiikeList.push({ isLiked: false });
+  }
+
   localStorage.setItem('likeList', JSON.stringify(localLiikeList));
 
 
@@ -100,7 +105,10 @@ function App() {
         <Route path="/" element={<Header />}>
           <Route path="/" element={<Main content={content} />}></Route>
           <Route path="home" element={<Main content={content} />}></Route>
-          {/* <Route path={"/"} element={<Navigate replace to={"/QuiteQuote"} />} ></Route> */}
+          <Route path="settings" element={<Settings />}></Route>
+          <Route path="/settings/profile" element={<SettingProfile />}></Route>
+          <Route path="/settings/theme" element={<SettingTheme />}></Route>
+          <Route path="/settings/saved_contents" element={<SettingsSavedContents />}></Route>
           <Route path="information" element={<Information />}></Route>
           <Route path="discover" element={<Discover />} />
           <Route path='/discover/love' element={<TopicsPages topicImg={sourceLove} topic={'Love'} viewerTopic={'Love_quotes'} list={content} clickToClose={clickToClose} toogleTopicBoxDisplay={toogleDisplay} />}>

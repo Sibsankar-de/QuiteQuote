@@ -5,6 +5,14 @@ export const CommentExpand = (props) => {
 
     // const [value, setValue] = useState(false);
 
+    let darkMode;
+    if(localStorage.getItem('isDarkMode')===null){
+        darkMode = false;
+    }
+    else{
+        darkMode = JSON.parse(localStorage.getItem('isDarkMode'));
+    }
+
     
     const commentRef = useRef(null);
     

@@ -3,6 +3,14 @@ import React, { useState, useRef } from 'react'
 
 export const Addbox = (props) => {
 
+    let darkMode;
+    if(localStorage.getItem('isDarkMode')===null){
+        darkMode = false;
+    }
+    else{
+        darkMode = JSON.parse(localStorage.getItem('isDarkMode'));
+    }
+
     const [addbtnCol, setAddBtnCol] = useState(true)
     const sourceLove = require("./img/interest_1.png");
     const sourceHappy = require("./img/interest_2.png");
@@ -11,7 +19,7 @@ export const Addbox = (props) => {
     const sourceFamily = require("./img/interest_5.png");
     const sourceMotiv = require("./img/interest_6.png");
 
-    const initValue = `2px solid #00000066`;
+    const initValue = darkMode?`2px solid #ffffff87`:`2px solid #00000066`;
     const finValue = `2.5px solid #63517f`;
 
     const [love, setLove] = useState(initValue);
@@ -41,11 +49,12 @@ export const Addbox = (props) => {
         props.updateFeed(feedUpdateList);
     }
  
+    
 
     return (
         <>
             <div className="add-box-back" style={props.style} >
-                <div id="add-box" ref={addBoxRef}>
+                <div id="add-box" ref={addBoxRef} style={{backgroundColor: darkMode?'#35363a':'white', color: darkMode?'white':'black', borderColor: darkMode?'#35363a':'black'}}>
                     <div id="close-add-box">
                         <button id='close-btn' onClick={props.clickToClose}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-x-lg" viewBox="0 0 16 16">
@@ -74,7 +83,7 @@ export const Addbox = (props) => {
                                                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
                                             </svg>
                                         </button>}
-                                        <div >
+                                        <div style={{color: darkMode?'white':'black'}}>
                                             <img src={sourceLove} draggable="false" style={{ outline: love }}
                                                 onClick={() => {
                                                     if (love === initValue) {
@@ -108,7 +117,7 @@ export const Addbox = (props) => {
                                                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
                                             </svg>
                                         </button>}
-                                        <div >
+                                        <div style={{color: darkMode?'white':'black'}}>
                                             <img src={sourceHappy} draggable="false" style={{ outline: happy }}
                                                 onClick={() => {
                                                     if (happy === initValue) {
@@ -142,7 +151,7 @@ export const Addbox = (props) => {
                                                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
                                             </svg>
                                         </button>}
-                                        <div >
+                                        <div style={{color: darkMode?'white':'black'}}>
                                             <img src={sourceSad} draggable="false" style={{ outline: sad }}
                                                 onClick={() => {
                                                     if (sad === initValue) {
@@ -176,7 +185,7 @@ export const Addbox = (props) => {
                                                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
                                             </svg>
                                         </button>}
-                                        <div >
+                                        <div style={{color: darkMode?'white':'black'}}>
                                             <img src={sourceFun} draggable="false" style={{ outline: fun }}
                                                 onClick={() => {
                                                     if (fun === initValue) {
@@ -210,7 +219,7 @@ export const Addbox = (props) => {
                                                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
                                             </svg>
                                         </button>}
-                                        <div >
+                                        <div style={{color: darkMode?'white':'black'}}>
                                             <img src={sourceFamily} draggable="false" style={{ outline: family }}
                                                 onClick={() => {
                                                     if (family === initValue) {
@@ -244,7 +253,7 @@ export const Addbox = (props) => {
                                                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
                                             </svg>
                                         </button>}
-                                        <div >
+                                        <div style={{color: darkMode?'white':'black'}}>
                                             <img src={sourceMotiv} draggable="false" style={{ outline: motiv }}
                                                 onClick={() => {
                                                     if (motiv === initValue) {

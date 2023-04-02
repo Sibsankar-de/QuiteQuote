@@ -24,7 +24,7 @@ main {
 #people-box {
     display: flex;
     flex-direction: row;
-    border: 1.8px solid rgb(208 204 204);
+    border: 1.8px solid #d0cccc;
     align-items: flex-start;
     width: 27em;
     border-radius: 10px;
@@ -149,7 +149,17 @@ main {
     background-color: white;
     border: 1.8px solid #d9dadb;
     border-radius: 5px;
-    transform: translate(-59px, 0);
+    transform: translate(-59px, -2em);
+    animation: threeDotAnimation 0.2s ease-in 1;
+}
+
+@keyframes threeDotAnimation{
+    0%{
+        opacity: 0.1;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .three-dot-opts ul {
@@ -194,19 +204,24 @@ main {
 
 }
 
-.like-nav-opts {
+.like-nav-opts ul{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.like-nav-opts button {
+.like-nav-opts ul li button {
     border: none;
     background-color: inherit;
 }
 
-.like-nav-opts ul {
+.like-nav-opts ul li{
     margin: 1.3em;
+    list-style: none;
+}
+
+.save-content{
+    margin-left: 12em;
 }
 
 .share a {
@@ -415,7 +430,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2em 19.5em 2em 0;
+    padding: 2em 19.5em 2em 0;
 }
 
 .main-page-footer p{
@@ -491,7 +506,7 @@ main {
 
     .three-dot-opts {
         width: fit-content;
-        transform: translate(-13vw, 0);
+        transform: translate(-13vw, -2em);
     }
 
     .three-dot-opts ul li {
@@ -534,8 +549,15 @@ main {
 
     .main-page-footer {
         margin: 0;
+        padding: 0;
     }
 
+}
+
+@media only screen and (max-width: 475px) {
+    .save-content{
+        margin-left: 32vw;
+    }
 }
 
 @media only screen and (max-width: 425px) {
@@ -578,7 +600,7 @@ main {
 
     .three-dot-opts {
         width: fit-content;
-        transform: translate(-13vw, 0);
+        transform: translate(-13vw, -2em);
     }
 
     .three-dot-opts ul li {
@@ -623,6 +645,16 @@ main {
         margin: 0;
     }
 
+    .save-content{
+        margin-left: 29vw;
+    }
+
+}
+
+@media only screen and (max-width: 405px) {
+    .save-content{
+        margin-left: 25vw;
+    }
 }
 
 @media only screen and (max-width: 375px) {
@@ -675,6 +707,28 @@ main {
         background-color: green;
     } */
 
+    .save-content{
+        margin-left: 17vw;
+    }
+
+}
+
+@media only screen and (max-width: 355px){
+    .save-content{
+        margin-left: 12vw;
+    }
+}
+
+@media only screen and (max-width: 330px){
+    .save-content{
+        margin-left: 8vw;
+    }
+}
+
+@media only screen and (max-width: 310px){
+    .save-content{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 320px) {
@@ -713,7 +767,9 @@ main {
         font-size: 9px;
     }
 
-    
+    .save-content{
+        margin-left: 7vw;
+    }
 
 }
 
