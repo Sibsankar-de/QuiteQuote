@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/quitequote/static/css/main.4d1d187e.css",
-    "main.js": "/quitequote/static/js/main.cae1ed56.js",
+    "main.js": "/quitequote/static/js/main.2aeffb7d.js",
     "static/js/787.bbe01249.chunk.js": "/quitequote/static/js/787.bbe01249.chunk.js",
     "static/media/feed_img9.jpg": "/quitequote/static/media/feed_img9.49c2ad22a7234f7ac9ee.jpg",
     "static/media/feed_img11.jpg": "/quitequote/static/media/feed_img11.e50977e4686e252de4b4.jpg",
@@ -27,11 +27,11 @@
     "static/media/user.png": "/quitequote/static/media/user.9bf3f16c3b741e13a38b.png",
     "index.html": "/quitequote/index.html",
     "main.4d1d187e.css.map": "/quitequote/static/css/main.4d1d187e.css.map",
-    "main.cae1ed56.js.map": "/quitequote/static/js/main.cae1ed56.js.map",
+    "main.2aeffb7d.js.map": "/quitequote/static/js/main.2aeffb7d.js.map",
     "787.bbe01249.chunk.js.map": "/quitequote/static/js/787.bbe01249.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4d1d187e.css",
-    "static/js/main.cae1ed56.js"
+    "static/js/main.2aeffb7d.js"
   ]
 }
