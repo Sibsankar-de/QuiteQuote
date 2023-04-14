@@ -20,7 +20,7 @@ export const Content = (props) => {
                         userName: contents[i].userName,
                         dpImg: contents[i].dpElem,
                         link: contents[i].link,
-                        contentLink: 'https://sibsankar-de.github.io/quitequote/#/home/#feedContent='+contentLink+'qqc',
+                        contentLink: 'https://sibsankar-de.github.io/quitequote/#/home#feedContent='+contentLink+'qqc',
                         feedImg: j,
                         isLiked: localLiikeList[x].isLiked
                     }
