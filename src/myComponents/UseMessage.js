@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+import UserMassageContext from '../contexts/UserMassageContext'
 
 export const UseMessage = (props) => {
     return (
         <>
-            <main className="use-massage-content">
-                <div className="use-message-container">
-                    {props.message}
-                </div>
-            </main>
+                {props.isMessage&&<div className="use-message-content">
+                    <div className="use-message-container">
+                        <p className="message-para">{props.message}</p>
+                    </div>
+                </div>}
         </>
     )
 }

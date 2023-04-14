@@ -79,7 +79,7 @@ export const TopicContentEnlarge = (props) => {
   return (
     <>
       <div className="topic-img-view-box-background">
-        <div className="topic-img-view-box" style={{backgroundColor: darkMode?'#35363a':'white', borderColor: darkMode?'#35363a':'black'}}>
+        <div className="topic-img-view-box" style={{ backgroundColor: darkMode ? '#35363a' : 'white', borderColor: darkMode ? '#35363a' : 'black' }}>
           <div id="close-topic-img-view-box" >
             <button id='close-btn' onClick={props.clickToClose}>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-x-lg" viewBox="0 0 16 16">

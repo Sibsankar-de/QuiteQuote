@@ -4,6 +4,7 @@ import { CommentExpand } from './CommentExpand';
 import { ThreeDots } from './ThreeDots';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 export const InnerContent = (props) => {
 
@@ -44,7 +45,7 @@ export const InnerContent = (props) => {
 
     const [commentList, setCommentList] = useState([]);
     const addComment = (comment) => {
-        const myComment = [comment];
+        const myComment = comment;
         setCommentList([...commentList, myComment]);
     }
 
@@ -97,6 +98,7 @@ export const InnerContent = (props) => {
         }
     }
 
+
     let darkMode;
     if(localStorage.getItem('isDarkMode')===null){
         darkMode = false;
@@ -109,6 +111,7 @@ export const InnerContent = (props) => {
         <>
 
             <div className="content-box">
+                <HashLink scroll={el => el.scrollIntoView({ behavior: 'instant', block: 'end' })} to={props.property.contentLink}><div></div></HashLink>
                 <div className="user-bar" style={{backgroundColor: darkMode?'#35363a':'white', borderColor: darkMode?'#262626':'#d0cccc'}}>
                     <div className="user-bar-img">
                         <Link to={props.property.link}>
@@ -135,7 +138,7 @@ export const InnerContent = (props) => {
                             <path d="M14 4a4 4 0 1 1-8 0 4 4 0 0 1 8 0z" />
                         </svg></button>
 
-                        <div className="three-dot-opts" ref={threeDotref} style={toogleDisplay}><ThreeDots downloadRef={props.property.feedImg} saveButtonClickHandeler={saveContentClickHandeler}/></div>
+                        <div className="three-dot-opts" ref={threeDotref} style={toogleDisplay}><ThreeDots downloadRef={props.property.feedImg} saveButtonClickHandeler={saveContentClickHandeler} isSaved={saveContent} copyLink={props.property.contentLink}/></div>
 
                     </div>
                 </div>

@@ -3,10 +3,20 @@ import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
 
 export const PageError = () => {
+    let darkMode;
+    if (localStorage.getItem('isDarkMode') === null) {
+        darkMode = false;
+    }
+    else {
+        darkMode = JSON.parse(localStorage.getItem('isDarkMode'));
+    }
     const style = {
         textAlign: 'center',
-        marginTop: '4em'
+        marginTop: '4em',
+        color: darkMode ? 'white' : 'black'
     }
+
+
     return (
         <>
             <Helmet>

@@ -22,6 +22,7 @@
     margin-top: 1em;
     justify-content: center;
     align-items: center;
+    height: 20em;
 }
 
 .user-img {
@@ -67,6 +68,7 @@
 
 .settings-opption-section-1 {
     margin-left: 1em;
+    margin-bottom: 0.6em;
 }
 
 .settings-opption-section-1 li {
@@ -115,10 +117,35 @@
     font-size: 0.6em;
 }
 
+.setting-privacy-help-option{
+    margin-left: 2em;
+}
+
+.setting-privacy-help-option button{
+    padding: 0.7em 1em;
+    border: none;
+    border-radius: 20px;
+    background-color: inherit;
+    color: #1245b4;
+    text-decoration: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+.setting-privacy-help-option a{
+    display: contents;
+}
+
+.setting-privacy-help-option button:hover{
+    background-color: #7a7e8540;
+    color: #4a78dc;
+}
+
+
 /* ************************************* */
 
 .settings-profile-content {
-    width: 40em;
+    width: 33em;
 }
 
 .settings-profile-content-header {
@@ -295,6 +322,19 @@
     align-items: center;
 }
 
+.img-preview-box{
+    display: flex;
+}
+
+.img-preview-box svg{
+    border-radius: 30%;
+}
+
+.img-preview-box p{
+    position: absolute;
+    transform: translate(2em, 3em);
+}
+
 .uploaded-img{
     width: 140px;
     height: 140px;
@@ -423,7 +463,8 @@ input:checked+.slider:before {
 
 .setting-page-back-btn {
     color: black;
-    margin-right: 1em;
+    margin-right: 0.5em;
+    display: flex;
 }
 
 .saved-contents-container {
@@ -466,6 +507,10 @@ input:checked+.slider:before {
 @media only screen and (max-width: 600px) {
     .settings-container {
         flex-direction: column;
+    }
+    
+    .user-info{
+        height: unset;
     }
 
     .settings-options {

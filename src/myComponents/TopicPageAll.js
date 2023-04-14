@@ -26,10 +26,11 @@ export const TopicPageAll = (props) => {
       <div className="topic-page-all-main">
         <div className="topic-page-all-main-container">
           <div className="topic-page-all-main-contents">
-            <ul>
-              {contentMaker(props.content).map((item, index) => {
+            <ul className="topic-page-main-outlet">
+              {contentMaker(props.content).length===0?<li>Sorry! No Quotes to display</li>:contentMaker(props.content).map((item, index) => {
                 return item.userName === props.topic && <li key={index}><img src={item.feedImg} alt="Loading..." draggable={false} onClick={props.onClick}/></li>
-              })}
+              })
+              }
             </ul>
           </div>
         </div>

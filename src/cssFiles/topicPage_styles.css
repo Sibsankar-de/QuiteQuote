@@ -7,7 +7,7 @@
     justify-content: center;
 }
 
-.topic-page-all-main-contents ul{
+.topic-page-main-outlet{
     display: flex;
     flex-direction: row;
     flex-flow: wrap;
@@ -31,7 +31,7 @@
 /* *** */
 
 @media only screen and (max-width: 425px) {
-    .topic-page-all-main-contents ul{
+    .topic-page-main-outlet{
         width: 90vw;
     }
 
@@ -56,7 +56,7 @@
 }
 
 @media only screen and (max-device-width: 1024px) and (min-device-width: 425px) {
-    .topic-page-all-main-contents ul{
+    .topic-page-main-outlet{
         width: 90vw;
     }
     .topic-page-all-main-contents ul li img{

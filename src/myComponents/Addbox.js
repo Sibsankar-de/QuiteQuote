@@ -20,7 +20,7 @@ export const Addbox = (props) => {
     const sourceMotiv = require("./img/interest_6.png");
 
     const initValue = darkMode?`2px solid #ffffff87`:`2px solid #00000066`;
-    const finValue = `2.5px solid #63517f`;
+    const finValue = `6px solid #4b72be80`;
 
     const [love, setLove] = useState(initValue);
     const [happy, setHappy] = useState(initValue);
@@ -71,7 +71,7 @@ export const Addbox = (props) => {
                             <div className="topics">
                                 <li>
                                     <div className="add-box-items">
-                                        {<button className="remove-interest-btn" style={{ visibility: love !== finValue ? 'hidden' : 'visible' }}
+                                        {<button className="remove-interest-btn" style={{ visibility: love !== finValue ? 'hidden' : 'visible', backgroundColor: darkMode?'black':'white'}}
                                             onClick={() => {
                                                 setLove(initValue);
                                                 listItem.splice((listItem.indexOf(sourceLove)), 1);
@@ -84,7 +84,7 @@ export const Addbox = (props) => {
                                             </svg>
                                         </button>}
                                         <div style={{color: darkMode?'white':'black'}}>
-                                            <img src={sourceLove} draggable="false" style={{ outline: love }}
+                                            <img src={sourceLove} draggable="false" style={{padding:love===finValue?"2px":"1px", border: love }}
                                                 onClick={() => {
                                                     if (love === initValue) {
                                                         setLove(finValue);
@@ -99,13 +99,13 @@ export const Addbox = (props) => {
                                                         setFeedUpdateList(feedUpdateList);
                                                     }
                                                 }}
-                                                alt="love" width="60px" />Love
+                                                alt="love" width={love===finValue?"50px":"60px"} />Love
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="add-box-items">
-                                        {<button className="remove-interest-btn" style={{ visibility: happy !== finValue ? 'hidden' : 'visible' }}
+                                        {<button className="remove-interest-btn" style={{ visibility: happy !== finValue ? 'hidden' : 'visible', backgroundColor: darkMode?'black':'white'}}
                                             onClick={() => {
                                                 setHappy(initValue);
                                                 listItem.splice((listItem.indexOf(sourceHappy)), 1);
@@ -118,7 +118,7 @@ export const Addbox = (props) => {
                                             </svg>
                                         </button>}
                                         <div style={{color: darkMode?'white':'black'}}>
-                                            <img src={sourceHappy} draggable="false" style={{ outline: happy }}
+                                            <img src={sourceHappy} draggable="false" style={{padding:happy===finValue?"2px":"1px", border: happy }}
                                                 onClick={() => {
                                                     if (happy === initValue) {
                                                         setHappy(finValue)
@@ -134,12 +134,12 @@ export const Addbox = (props) => {
                                                     }
                                                 }}
                                                 alt="happy_sign"
-                                                width="60px" />Happy</div>
+                                                width={happy===finValue?"50px":"60px"} />Happy</div>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="add-box-items">
-                                        {<button className="remove-interest-btn" style={{ visibility: sad !== finValue ? 'hidden' : 'visible' }}
+                                        {<button className="remove-interest-btn" style={{ visibility: sad !== finValue ? 'hidden' : 'visible', backgroundColor: darkMode?'black':'white'}}
                                             onClick={() => {
                                                 setSad(initValue);
                                                 listItem.splice((listItem.indexOf(sourceSad)), 1);
@@ -152,7 +152,7 @@ export const Addbox = (props) => {
                                             </svg>
                                         </button>}
                                         <div style={{color: darkMode?'white':'black'}}>
-                                            <img src={sourceSad} draggable="false" style={{ outline: sad }}
+                                            <img src={sourceSad} draggable="false" style={{padding:sad===finValue?"2px":"1px", border: sad }}
                                                 onClick={() => {
                                                     if (sad === initValue) {
                                                         setSad(finValue);
@@ -168,12 +168,12 @@ export const Addbox = (props) => {
                                                     }
                                                 }}
                                                 alt="sad_sign"
-                                                width="60px" />Sad</div>
+                                                width={sad===finValue?"50px":"60px"} />Sad</div>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="add-box-items">
-                                        {<button className="remove-interest-btn" style={{ visibility: fun !== finValue ? 'hidden' : 'visible' }}
+                                        {<button className="remove-interest-btn" style={{ visibility: fun !== finValue ? 'hidden' : 'visible', backgroundColor: darkMode?'black':'white'}}
                                             onClick={() => {
                                                 setFun(initValue);
                                                 listItem.splice((listItem.indexOf(sourceFun)), 1);
@@ -186,7 +186,7 @@ export const Addbox = (props) => {
                                             </svg>
                                         </button>}
                                         <div style={{color: darkMode?'white':'black'}}>
-                                            <img src={sourceFun} draggable="false" style={{ outline: fun }}
+                                            <img src={sourceFun} draggable="false" style={{padding:fun===finValue?"2px":"1px", border: fun }}
                                                 onClick={() => {
                                                     if (fun === initValue) {
                                                         setFun(finValue)
@@ -202,12 +202,12 @@ export const Addbox = (props) => {
                                                     }
                                                 }}
                                                 alt="fun_sign"
-                                                width="60px" />Funny</div>
+                                                width={fun===finValue?"50px":"60px"} />Funny</div>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="add-box-items">
-                                        {<button className="remove-interest-btn" style={{ visibility: family !== finValue ? 'hidden' : 'visible' }}
+                                        {<button className="remove-interest-btn" style={{ visibility: family !== finValue ? 'hidden' : 'visible', backgroundColor: darkMode?'black':'white'}}
                                             onClick={() => {
                                                 setFamily(initValue);
                                                 listItem.splice((listItem.indexOf(sourceFamily)), 1);
@@ -220,7 +220,7 @@ export const Addbox = (props) => {
                                             </svg>
                                         </button>}
                                         <div style={{color: darkMode?'white':'black'}}>
-                                            <img src={sourceFamily} draggable="false" style={{ outline: family }}
+                                            <img src={sourceFamily} draggable="false" style={{padding:family===finValue?"2px":"1px", border: family }}
                                                 onClick={() => {
                                                     if (family === initValue) {
                                                         setFamily(finValue);
@@ -235,13 +235,13 @@ export const Addbox = (props) => {
                                                         setFeedUpdateList(feedUpdateList);
                                                     }
                                                 }}
-                                                alt="family" width="60px" />With
+                                                alt="family" width={family===finValue?"50px":"60px"} />With
                                             Family</div>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="add-box-items">
-                                        {<button className="remove-interest-btn" style={{ visibility: motiv !== finValue ? 'hidden' : 'visible' }}
+                                        {<button className="remove-interest-btn" style={{ visibility: motiv !== finValue ? 'hidden' : 'visible', backgroundColor: darkMode?'black':'white'}}
                                             onClick={() => {
                                                 setMotiv(initValue);
                                                 listItem.splice((listItem.indexOf(sourceMotiv)), 1);
@@ -254,7 +254,7 @@ export const Addbox = (props) => {
                                             </svg>
                                         </button>}
                                         <div style={{color: darkMode?'white':'black'}}>
-                                            <img src={sourceMotiv} draggable="false" style={{ outline: motiv }}
+                                            <img src={sourceMotiv} draggable="false" style={{padding:motiv===finValue?"2px":"1px", border: motiv }}
                                                 onClick={() => {
                                                     if (motiv === initValue) {
                                                         setMotiv(finValue);
@@ -270,7 +270,7 @@ export const Addbox = (props) => {
                                                     }
                                                 }}
                                                 alt="motivation_sign"
-                                                width="60px" />Motivation</div>
+                                                width={motiv===finValue?"50px":"60px"} />Motivation</div>
                                     </div>
                                 </li>
                             </div>

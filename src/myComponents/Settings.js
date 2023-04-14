@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import userImg from './svg/user_svg_logo.svg'
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
@@ -87,7 +88,7 @@ export const Settings = () => {
                                             <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
                                         </svg>}<div className="settings-option-para">
                                             <p className='option-name'>Change Theme</p>
-                                            <p className="option-description">Change your theme to dark mode</p>
+                                            <p className="option-description">{darkMode?"Dark mode is enabled":"Change your theme to dark mode"}</p>
                                         </div></Link>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className='option-arrow' viewBox="0 0 16 16" style={{ color: darkMode ? 'white' : 'black' }}>
                                             <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
@@ -98,13 +99,15 @@ export const Settings = () => {
                                         <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
                                     </svg><div className="settings-option-para">
                                             <p className='option-name'>About Us</p>
-                                            <p className="option-description">iInformation about us</p>
+                                            <p className="option-description">Information about us</p>
                                         </div></Link>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className='option-arrow' viewBox="0 0 16 16" style={{ color: darkMode ? 'white' : 'black' }}>
                                             <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
                                         </svg></li>
                                 </ul>
-
+                                <div className="setting-privacy-help-option">
+                                    <Link to={"/information/#privacy"}><button>Privacy help!</button></Link>
+                                </div>
                             </div>
                         </div>
                     </div>

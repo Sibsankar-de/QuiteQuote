@@ -7,6 +7,7 @@ import './cssFiles/header_style.css';
 import './cssFiles/discover.css';
 import './cssFiles/topicPage_styles.css';
 import './cssFiles/settings_style.css';
+import './cssFiles/search_page.css';
 import './index.css';
 import Header from './myComponents/Header';
 import { Main } from './myComponents/Main';
@@ -22,6 +23,8 @@ import { Settings } from './myComponents/Settings';
 import { SettingProfile } from './myComponents/SettingProfile';
 import { SettingTheme } from './myComponents/SettingTheme';
 import { SettingsSavedContents } from './myComponents/SettingsSavedContents';
+import { Search } from './myComponents/Search';
+import { SearchResultPage } from './myComponents/SearchResultPage';
 
 
 function App() {
@@ -59,6 +62,8 @@ function App() {
   }
 
 
+  // ************likeList activation section***************
+
   let x = 0;
   for (let i in content) {
     x += content[i].feedElem.length;
@@ -79,6 +84,29 @@ function App() {
   localStorage.setItem('likeList', JSON.stringify(localLiikeList));
 
 
+// ************darkmode enable section************
+
+  let darkMode;
+  if (localStorage.getItem('isDarkMode') === null) {
+    darkMode = false;
+  }
+  else {
+    darkMode = JSON.parse(localStorage.getItem('isDarkMode'));
+  }
+
+  useEffect(() => {
+    if (darkMode) {
+      document.getElementsByTagName('html')[0].style.backgroundColor = '#202124';
+      document.getElementsByTagName('body')[0].style.backgroundColor = '#202124';
+    }
+    else {
+      document.getElementsByTagName('html')[0].style.backgroundColor = 'white';
+      document.getElementsByTagName('body')[0].style.backgroundColor = 'white';
+    }
+  });
+
+
+  // ************topicpage content display section***************
 
   const sourceLove = require("./myComponents/img/interest_1.png");
   const sourceHappy = require("./myComponents/img/interest_2.png");
@@ -97,6 +125,15 @@ function App() {
     }
   }
 
+  useEffect(() => {
+    if (toogleDisplay) {
+      document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+    }
+    else {
+      document.getElementsByTagName('body')[0].style.overflow = 'scroll';
+    }
+  })
+
 
   return (
     <>
@@ -105,6 +142,7 @@ function App() {
         <Route path="/" element={<Header />}>
           <Route path="/" element={<Main content={content} />}></Route>
           <Route path="home" element={<Main content={content} />}></Route>
+          <Route path="search" element={<Search content={content} />}></Route>
           <Route path="settings" element={<Settings />}></Route>
           <Route path="/settings/profile" element={<SettingProfile />}></Route>
           <Route path="/settings/theme" element={<SettingTheme />}></Route>

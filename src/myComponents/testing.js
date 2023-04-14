@@ -4,6 +4,7 @@
 //     var x = 0;
 //     for (let i in contents) {
 
+
 //         for (let j of contents[i].elem2) {
             
 //             List.push({ userName: contents[i].userName, dpImg: contents[i].elem1, feedImg: j, isLiked: 'isLiked_' + (x + 1) })
@@ -163,8 +164,44 @@
 //   // Immutable copy of lunch
 //   var lunchClone = addToObject(lunch);
 
-var arr = ['apple', 'macbook', 'android', 'linux'];
-console.log(arr.length);
+// var arr = ['apple', 'macbook', 'android', 'linux'];
+// console.log(arr.length);
+
+// var str = 'I http//:sibsankar-de.github.io/quitequote my india';
+// var handler = (str) =>{
+//     const arr = str.split(' ');
+//     var newStr = [];
+//     for (let i in arr){
+//         newStr.push(arr[i])
+//     }
+//     return newStr;
+// }
+
+// console.log(handler(str));
+// console.log(str.split(''));
+
+const obj = {
+        love: {
+            userName: 'Love_quotes',
+            elem1: 'love',
+            elem2: ['hg', 'hdj', 'yrt', 'hdte'],
+        },
+        sad: {
+            userName: 'Sad_quotes',
+            elem1: 'sad',
+            elem2: ['ytwyr', 'tquiqe', 'plnf', 'qewdg'],
+        },
+        happy: {
+            userName: 'Happy_quotes',
+            elem1: 'happy',
+            elem2: ['hhgxhhg', 'eefrg', '34wrg', 'ij8dsf'],
+        },
+        
+    };
+
+    for (let i in obj){
+        console.log(obj[i].userName);
+    }
 
 
 

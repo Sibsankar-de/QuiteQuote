@@ -87,6 +87,45 @@ header {
     cursor: pointer;
 }
 
+.navbar ul li a div{
+    display: flex;
+    width: 4em;
+    height: 3.65em;
+    justify-content: center;
+    align-items: center;
+}
+
+.setting-btn-active{
+    transform: rotate(0);
+    animation: settingsBtnAnimation 1s ease-in-out 1;
+}
+
+@keyframes settingsBtnAnimation{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.search-btn-active{
+    animation: searchBtnAnimation 1s ease-in-out 1;
+}
+
+@keyframes searchBtnAnimation{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(75deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+
 a {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
@@ -97,12 +136,35 @@ a {
     user-select: none;
 }
 
+/* .btn-fill-animation{
+    animation: btnFillAnimation 0.2s 1 forwards;
+} */
+
+@keyframes btnFillAnimation{
+    0%{
+        color: #00000085;
+    }
+    100%{
+        color: inherit;
+    }
+}
+
 html {
     -webkit-tap-highlight-color: transparent;
 }
 
-.navbar ul li .active {
+.navbar ul li .active div{
     border-bottom: 2px solid #838282;
+    animation: navBtnBorderBottomAnimation 1s 1;
+}
+
+@keyframes navBtnBorderBottomAnimation{
+    0%{
+        width: 0.2em;
+    }
+    100%{
+        width: 4em;
+    }
 }
 
 body{
@@ -120,7 +182,7 @@ body::-webkit-scrollbar {
 
 @media only screen and (min-device-width: 1024px) {
 
-    .navbar ul li a:hover {
-        border-bottom: 2px solid #838282;
+    .navbar ul li a div:hover {
+        border-bottom: 2px solid transparent;
     }
 }

@@ -7,14 +7,6 @@ import { TopicContentEnlarge } from './TopicContentEnlarge';
 
 export const TopicsPages = (props) => {
 
-    useEffect(() => {
-        if (props.toogleTopicBoxDisplay === true) {
-            document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-        }
-        if (props.toogleTopicBoxDisplay === false) {
-            document.getElementsByTagName('body')[0].style.overflow = 'scroll';
-        }
-    })
 
     let darkMode;
     if(localStorage.getItem('isDarkMode')===null){

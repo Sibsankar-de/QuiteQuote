@@ -65,7 +65,7 @@ main {
     border-radius: 50%;
 }
 
-#add-interest {
+#add-interest-btn {
     border: none;
     background-color: inherit;
     display: flex;
@@ -77,6 +77,7 @@ main {
     font-weight: lighter;
     margin: 0.6em;
     flex: none;
+    cursor: pointer;
 }
 
 .people {
@@ -174,11 +175,13 @@ main {
     list-style: none;
     padding: 0.5em;
     width: 6em;
+    cursor: pointer;
 }
 
 .three-dot-opts ul li button {
     border: none;
     background-color: inherit;
+    cursor: pointer;
 }
 
 .three-dot-opts ul li:hover {
@@ -335,13 +338,57 @@ main {
     display: none;
 }
 
-.comment-list{
+.comment-update-li{
     list-style: none;
-}
-
-.comment-list li{
     text-decoration: none;
     margin: 0.2em 0 1.2em 1em;
+    display: flex;
+    align-items: center;
+}
+
+.comment-set-para{
+    display: flex;
+}
+
+.comment-like-bar{
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-like-bar button{
+    border: none;
+    padding: 0.2em;
+    border-radius: 50%;
+    display: flex;
+    background-color: transparent;
+}
+
+.comment-like-bar button:hover{
+    background-color: #7a7e8540;
+}
+
+.comment-reply-list{
+    margin-left: 1.3em;
+}
+
+.comment-reply{
+    display: flex;
+    align-items: baseline;
+}
+
+.reply-set-line{
+    height: 2em;
+    border-left: 1px solid;
+}
+
+.reply-set-para{
+    display: flex;
+    align-items: baseline;
+}
+
+.reply-set-para-start-line{
+    width: 1em;
+    border-top: 1px solid;
 }
 
 #close-comment-box{
@@ -460,6 +507,24 @@ main {
 }
 #refresh-page:hover{
     background-color: #0c2b70;
+}
+
+/* ********************User messagebox css*************** */
+
+.use-message-content{
+    position: fixed;
+    height: 100vh;
+    margin-top: 80vh;
+}
+
+.use-message-container{
+    padding: 0.4em 1em;
+    background-color: white;
+    border: 1px solid #d9dadb;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 23em;
+    height: fit-content;
 }
 
 /* Responsive codes Starts from Here  */

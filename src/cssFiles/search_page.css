@@ -1,0 +1,237 @@
+.search-box-heading {
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+.search-box {
+    margin-left: 2em;
+}
+
+.search-box-bar {
+    width: fit-content;
+    height: 3em;
+    border: 1px solid #616263;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    border-right: none;
+    background-color: white;
+}
+
+#search-input {
+    width: 27em;
+    padding-left: 1em;
+    padding-right: 1em;
+    outline: none;
+    border: none;
+    font-size: larger;
+    height: 2.5em;
+    border-radius: 10px;
+}
+
+
+.search-box-btn {
+    padding: 0.55em;
+    border-radius: 0 10px 10px 0;
+    background-color: #3a62bb;
+    border-color: #616263;
+    color: white;
+}
+
+.search-suggestion-box {
+    margin-top: 2em;
+    margin-left: 4em;
+    height: 26em;
+    overflow-y: scroll;
+}
+
+
+.search-suggestion-box::-webkit-scrollbar{
+    display: none;
+}
+
+.search-suggestion-box-heading {
+    margin-bottom: 1em;
+}
+
+.search-suggestions {
+    margin-left: 1em;
+}
+
+.search-suggestions li {
+    list-style: none;
+    border-bottom: 1px solid #616263;
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.search-suggestions li:hover {
+    background-color: #9a989842;
+}
+
+.search-suggestions li a {
+    text-decoration: none;
+    color: black;
+    padding: 1em;
+}
+
+.search-suggestion-copy-btn {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 1em;
+}
+
+/* ******************************************** */
+
+
+.search-result-box{
+    margin: 0;
+    max-width: 35em;
+    display: flex;
+    justify-content: center;
+}
+
+.search-result-page-head{
+    padding-top: 2em;
+    background-color: #202124;
+    width: 70vw;
+    position: fixed;
+    padding-bottom: 2em;
+}
+
+.search-reult-page-bar{
+    width: 27em;
+    padding: 0.5em 1em;
+    border: 1px solid #616263;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    cursor: text;
+    background-color: white;
+}
+
+.search-reult-page-bar svg{
+    margin-right: 0.6em;
+    cursor: auto;
+}
+
+.search-result-page-main{
+    margin-top: 7em;
+}
+
+.search-result-details-heading{
+    margin-bottom: 1em;
+}
+
+.search-results{
+    margin-left: 1.5em;
+}
+
+.search-result-ul{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+}
+
+.search-result-ul li{
+    list-style: none;
+    /* display: flex; */
+    border-bottom: 1px solid #616263;
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.search-result-ul li a{
+    color: inherit;
+    text-decoration: none;
+    padding: 1.5em;
+}
+
+.result-more-btn{
+    background-color: #4b72be40;
+    border: none;
+    padding: 0.5em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    border-radius: 20px;
+}
+
+.result-more-btn svg {
+    margin-left: 0.2em;
+}
+
+.more-btn-svg-clicked{
+    transform: rotate(-180deg);
+    animation: moreBtnAnimation 0.4s 1;
+}
+
+@keyframes moreBtnAnimation{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(-180deg);
+    }
+}
+
+.search-result-not-found-box{
+    margin-left: 2em;
+    margin-top: 4em;
+    text-align: center;
+}
+
+.search-result-img{
+    max-width: 25em;
+    margin: 2em;
+    border-radius: 10px;
+}
+
+
+/* Responsive codes Starts from Here  */
+/* *** */
+/* *** */
+
+@media only screen and (max-width: 480px) {
+    .search-box {
+        margin-left: 0;
+    }
+
+    #search-input {
+        width: 80vw;
+    }
+
+    .search-suggestion-box {
+        margin-left: 0.2em;
+    }
+
+    .search-result-page-head{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .search-reult-page-bar{
+        width: 80vw;
+    }
+
+    .search-result-details-heading{
+        margin-left: 5vw;
+    }
+
+    .search-result-img{
+        max-width: 90vw;
+        margin-left: 0;
+        margin-right: 0 ;
+    }
+}
+
+@media only screen and (max-device-width: 1024px) and (min-device-width: 480px) {
+    #search-input {
+        width: 19em;
+    }
+}

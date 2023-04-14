@@ -5,18 +5,22 @@ import { LoopContent } from './LoopContent';
 
 export const Content = (props) => {
     let localLiikeList = JSON.parse(localStorage.getItem('likeList'))
-
     let x = 0;
+    let contentLink;
     const contentMaker = (contents) => {
         const List = [];
         for (let i in contents) {
             for (let j of contents[i].feedElem) {
+                contentLink = j.replace('/quitequote/static/media/', '');
+                contentLink = contentLink.replace('.jpg', '');
+                contentLink = contentLink.replace('.png', '');
                 List.push(
                     {
                         sno: x,
                         userName: contents[i].userName,
                         dpImg: contents[i].dpElem,
                         link: contents[i].link,
+                        contentLink: 'https://sibsankar-de.github.io/quitequote/#/home/#feedContent='+contentLink+'qqc',
                         feedImg: j,
                         isLiked: localLiikeList[x].isLiked
                     }
