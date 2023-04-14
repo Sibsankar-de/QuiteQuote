@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/quitequote/static/css/main.20acd8eb.css",
-    "main.js": "/quitequote/static/js/main.65a17056.js",
+    "main.css": "/quitequote/static/css/main.4d1d187e.css",
+    "main.js": "/quitequote/static/js/main.cae1ed56.js",
     "static/js/787.bbe01249.chunk.js": "/quitequote/static/js/787.bbe01249.chunk.js",
     "static/media/feed_img9.jpg": "/quitequote/static/media/feed_img9.49c2ad22a7234f7ac9ee.jpg",
     "static/media/feed_img11.jpg": "/quitequote/static/media/feed_img11.e50977e4686e252de4b4.jpg",
@@ -23,14 +23,15 @@
     "static/media/interest_3.png": "/quitequote/static/media/interest_3.c2dbe63a276283129476.png",
     "static/media/interest_6.png": "/quitequote/static/media/interest_6.a3fe561d35aa97c6a9b1.png",
     "static/media/feed_img12.png": "/quitequote/static/media/feed_img12.5194e6553f0ba978f9f8.png",
+    "static/media/user_svg_logo.svg": "/quitequote/static/media/user_svg_logo.e57f5b3f1069822711f2e72b0b29659c.svg",
     "static/media/user.png": "/quitequote/static/media/user.9bf3f16c3b741e13a38b.png",
     "index.html": "/quitequote/index.html",
-    "main.20acd8eb.css.map": "/quitequote/static/css/main.20acd8eb.css.map",
-    "main.65a17056.js.map": "/quitequote/static/js/main.65a17056.js.map",
+    "main.4d1d187e.css.map": "/quitequote/static/css/main.4d1d187e.css.map",
+    "main.cae1ed56.js.map": "/quitequote/static/js/main.cae1ed56.js.map",
     "787.bbe01249.chunk.js.map": "/quitequote/static/js/787.bbe01249.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.20acd8eb.css",
-    "static/js/main.65a17056.js"
+    "static/css/main.4d1d187e.css",
+    "static/js/main.cae1ed56.js"
   ]
 }
